@@ -14,3 +14,15 @@
 > you can use any language for finding the solution and convert the flag into text format
 > 
 > The prime modulus in GF(p) p=21888242871839275222246405745257275088696311157297823662689037894645226208583
+
+
+## Solution
+$x$ is the private key, $G$ is the generator of the curve, and $P$ is the public key.
+
+$$P = xG$$
+
+run sage:
+```sh
+> sage src/ingonyama/i1_safe_bn254/src/solution.sage 
+Elliptic Curve defined by y^2 = x^3 + 2023 over Finite Field of size 21888242871839275222246405745257275088696311157297823662689037894645226208583
+```
