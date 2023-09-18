@@ -17,9 +17,6 @@ F = GF(p)
 E = EllipticCurve(F, [0, 2023])
 
 print(E)
-print(E.order())
-
-print(factor(E.order()))
 
 G = E(Gx, Gy)
 order = G.order()
@@ -31,11 +28,14 @@ P = E(Px, Py)
 
 dlogs = []
 moduli = [p**e for p, e in factors]
+print("moduli", moduli)
 # Ignore largest factor to make problem computationally feasible
 for m in moduli[:-1]:
     t = order // m
     dlog = discrete_log(t * P, t * G, operation="+")
     dlogs.append(dlog)
+
+print("dlogs", dlogs)
 
 k = crt(dlogs, moduli[:-1])
 print(f"Secret k: {k} mod {math.prod(moduli[:-1])}")
