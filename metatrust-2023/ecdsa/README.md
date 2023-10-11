@@ -63,9 +63,9 @@ def random(m, s):
 $$\begin{align*}
 &\Rightarrow
 \left\{\begin{matrix}
-s_1 = \frac{m_1 + r_1 \cdot sk}{pm_1 +  a} 
+s_1 = \frac{m_1 + r_1 \cdot sk}{pm_1 + a} 
 \\ 
-s_2 = \frac{m_2 + r_2 \cdot sk}{pm2 + a} 
+s_2 = \frac{m_2 + r_2 \cdot sk}{pm_2 + a} 
 \end{matrix}\right.
 \\
 &\Rightarrow
