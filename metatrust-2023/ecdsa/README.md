@@ -60,9 +60,7 @@ def random(m, s):
 * private key: $sk$
 * deterministic k: $k_i = [m_i \cdot P_1].x + [sk \cdot P_2].x$, and point $P_1$ and $P_2$ is on the same curve, and they are public. let $pm_i = [m_i \cdot P_1].x$ and $a = [sk \cdot P_2].x$, so $k_i = pm_i + a$, a is a unknow **constant** number.
 
-$$
-\begin{align*}
-    
+$$\begin{align*}
 &\Rightarrow
 \left\{\begin{matrix}
 s_1 = \frac{m_1 + r_1 \cdot sk}{pm_1 +  a} 
@@ -76,8 +74,7 @@ s_1(pm_1 + a) = m_1 + r_1 \cdot sk
 \\ 
 s_2(pm_2 + a) = m_2 + r_2 \cdot sk
 \end{matrix}\right.
-\end{align*}
-$$
+\end{align*}$$
 
 Two unknowns and two linear equations can calculate $sk = \frac{s_1s_2(pm_1 - pm_2) + (m_2s_1 - m_1s_2)}{r_1s_2 - r_2s_1}$
 
