@@ -93,5 +93,21 @@ ps3: 0xb36a63f0329d0ad45be9bbdea6f62508a9add0d79c51c97adc11dfb720cad37a
 1
 ```
 
+## others
+how to calculate $1/2P$?
+
+For the elliptic curve group of order $n$, let $Q = 1/2 P$, because $\frac {n+1}{2} \cdot 2 \equiv 1 \mod n$, so $\frac{n+1}{2} \equiv \frac{1}{2} \mod n$, so $Q = \frac{n+1}{2} P$, we can calculate $\frac{n+1}{2}$  easily.
+
+how to calculate $\sqrt{a} \mod n$?
+```py
+SP = 0xFFFFFFFF00000001000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFF
+# > F = GF(SP)
+# > y_sqr2 = F.from_integer(0x55936ba5f40af4a80bc019b90a3afb30c1f5a5268d3cda04fc4dc4c86cae5c84)
+# > y_sqr2.sqrt(extend=False, all=True)
+# [16266993938295423052800445989939399534749345174288806400925877505453552280846,
+# 99525095272060825709897000959468173995336798241001507794607753803413545573105]
+```
+
+
 ## reference
 * https://docs.google.com/presentation/d/1_Z-0bjIM15UaZjq6lpizZCV2azGn_zcz/edit#slide=id.p1
