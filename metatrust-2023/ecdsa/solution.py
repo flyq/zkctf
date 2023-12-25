@@ -37,3 +37,11 @@ print("pr3:", hex(pr3))
 print("ps3:", hex(ps3))
 
 print(verify_ctf(pr3, ps3))
+
+print(not 10)
+print(not 0)
+print(not 1)
+
+print(igcdex(2, 3))
+print(igcdex(10, 12))
+print(igcdex(100, 2004))

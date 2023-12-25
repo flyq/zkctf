@@ -163,10 +163,37 @@ def ec_neg(pt: EPoint):
     return res
 
 
+# Get k's ith bit, start from right
 def bit(k, i):
     if i == 0:
         return k & 1
     return (k >> i) & 1
+
+
+def bit2(k, i):
+    if i == 0:
+        return k % 2
+    while i > 0:
+        k = k // 2
+        i = i - 1
+    return k % 2
+
+
+# print(bit(1, 0))
+# print(bit(3, 0))
+# print(bit(10001, 0))
+# print(bit(1, 2))
+# print(bit(4, 2))
+# print(bit(-1, 100000))
+# print(bit(-1, 0))
+# print("asda")
+# print(bit2(1, 0))
+# print(bit2(3, 0))
+# print(bit2(10001, 0))
+# print(bit2(1, 2))
+# print(bit2(4, 2))
+# print(bit2(-1, 100000))
+# print(bit2(-1, 0))
 
 
 def mult(P, r):  #  multiplication r*P
